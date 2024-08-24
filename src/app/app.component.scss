@@ -1,0 +1,26 @@
+.spacer{
+  flex:1
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding:0 16px;
+}
+button{
+  color: white;
+  text-transform: uppercase;
+
+}
+button.active{
+  font-weight: 600;
+
+}
+.custom-toolbar{
+  background-color:#ff0000;
+}
+.navbar-brand{
+font-Weight: 600;
+margin-right:16px;
+font-size: 20px;
+}
+

@@ -1,0 +1,73 @@
+/* signup.component.scss */
+
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+}
+
+/* Card styling */
+mat-card {
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Title styling */
+mat-card-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #3f51b5;
+  margin-bottom: 20px;
+}
+
+/* Form fields styling */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-form-field .mat-form-field-outline-start,
+mat-form-field .mat-form-field-outline-end {
+  border-width: 2px !important;
+}
+
+/* Input placeholder styling */
+input::placeholder {
+  color: #9e9e9e;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+mat-icon-button {
+  margin-right: -12px;
+}
+
+/* Snackbar styles */
+.error-snackbar {
+  background-color: #f44336 !important;
+  color: #fff !important;
+}
+
+mat-error {
+  font-size: 12px;
+  color: #d32f2f;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  mat-card {
+    width: 90%;
+  }
+}

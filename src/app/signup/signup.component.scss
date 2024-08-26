@@ -1,29 +1,36 @@
-/* signup.component.scss */
-
 /* Container styling */
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  align-items: flex-start; /* Aligns the card to the top */
+  padding-top: 40px; /* Adjusts the top padding to reduce space */
+  padding-bottom: 40px; /* Optional, for consistent bottom padding */
   background-color: #f4f5f7;
+  min-height: 100vh; /* Ensures full height but without unnecessary extra space */
 }
 
 /* Card styling */
 mat-card {
-  width: 400px;
-  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 25px; /* Adjust padding for better spacing */
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  background-color: #ffffff;
+
+  @media (max-width: 600px) {
+    max-width: 90%;
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
 }
 
 /* Title styling */
 mat-card-title {
   text-align: center;
-  font-size: 24px;
+  font-size: 22px; /* Adjust font size for better readability */
   font-weight: 500;
   color: #3f51b5;
-  margin-bottom: 20px;
+  margin-bottom: 25px; /* Increase margin for better spacing */
 }
 
 /* Form fields styling */
@@ -42,12 +49,22 @@ input::placeholder {
   color: #9e9e9e;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Button styling */
 button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   font-weight: 600;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
 }
 
 mat-icon-button {
@@ -68,6 +85,34 @@ mat-error {
 /* Responsive styling */
 @media (max-width: 480px) {
   mat-card {
-    width: 90%;
+    width: 95%;
+    padding: 15px;
+  }
+  
+  mat-card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 15px;
   }
 }
+/* Signup component SCSS file */
+
+mat-form-field {
+  position: relative;
+
+  mat-icon {
+    font-size: 20px; /* Adjust the size of the icon */
+  }
+
+  button[mat-icon-button] {
+    padding: 0; /* Remove padding around the button */
+    width: 30x; /* Adjust the button width */
+    height: 50px; /* Adjust the button height */
+    line-height: 1; 
+  }
+}
+

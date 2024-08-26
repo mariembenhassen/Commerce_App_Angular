@@ -49,8 +49,10 @@
         <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid" (click)="onSubmit()">
           Sign Up 
         </button>
-
       </form>
     </mat-card-content>
+    <mat-card-actions class="sign-in-actions">
+      <button mat-button color="accent" routerLink="/login">Already have an account? Log In</button>
+    </mat-card-actions>
   </mat-card>
 </div>

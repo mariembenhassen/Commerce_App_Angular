@@ -1,0 +1,110 @@
+/* Container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px 40px;/* Reduced top padding to bring the card closer to the app bar */
+  background-color: #f4f5f7;
+  min-height: 100vh;
+}
+
+/* Card styling */
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* Title styling */
+mat-card-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #3f51b5;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Form fields styling */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+
+  mat-icon {
+    font-size: 22px;
+    color: #757575;
+  }
+
+  button[mat-icon-button] {
+    padding: 0;
+    width: 30px;
+    height: 50px;
+    line-height: 1;
+  }
+
+  .mat-form-field-outline-start,
+  .mat-form-field-outline-end {
+    border-width: 2px !important;
+  }
+}
+
+/* Button styling */
+button[mat-raised-button] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #3f51b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+}
+
+button[mat-raised-button]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.5);
+}
+
+/* Sign-Up Button Styling */
+.sign-up-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign-up-actions button {
+  font-size: 14px;
+  color: #3f51b5;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.sign-up-actions button:hover {
+  color: #303f9f;
+  text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  mat-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  mat-card-title {
+    font-size: 20px;
+  }
+
+  button[mat-raised-button] {
+    padding: 10px;
+    font-size: 15px;
+  }
+}

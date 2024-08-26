@@ -2,35 +2,30 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Aligns the card to the top */
-  padding-top: 40px; /* Adjusts the top padding to reduce space */
-  padding-bottom: 40px; /* Optional, for consistent bottom padding */
+  align-items: center;
+  padding: 0px 20px 40px;
   background-color: #f4f5f7;
-  min-height: 100vh; /* Ensures full height but without unnecessary extra space */
+  min-height: 100vh;
 }
 
 /* Card styling */
 mat-card {
   width: 100%;
   max-width: 400px;
-  padding: 25px; /* Adjust padding for better spacing */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   background-color: #ffffff;
-
-  @media (max-width: 600px) {
-    max-width: 90%;
-    padding: 20px; /* Adjust padding for smaller screens */
-  }
 }
 
 /* Title styling */
 mat-card-title {
   text-align: center;
-  font-size: 22px; /* Adjust font size for better readability */
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   color: #3f51b5;
-  margin-bottom: 25px; /* Increase margin for better spacing */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 /* Form fields styling */
@@ -49,70 +44,77 @@ input::placeholder {
   color: #9e9e9e;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Button styling */
-button {
+button[mat-raised-button] {
   width: 100%;
   padding: 12px;
   font-size: 16px;
   font-weight: 600;
   background-color: #3f51b5;
-  color: #fff;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-mat-icon-button {
-  margin-right: -12px;
+button[mat-raised-button]:hover {
+  background-color: #303f9f;
+  transform: translateY(-2px);
 }
 
-/* Snackbar styles */
-.error-snackbar {
-  background-color: #f44336 !important;
-  color: #fff !important;
+button[mat-raised-button]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.5);
 }
 
-mat-error {
-  font-size: 12px;
-  color: #d32f2f;
+/* Sign-In Button Styling */
+.sign-in-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign-in-actions button {
+  font-size: 14px;
+  color: #3f51b5;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.sign-in-actions button:hover {
+  color: #303f9f;
+  text-decoration: underline;
 }
 
 /* Responsive styling */
 @media (max-width: 480px) {
   mat-card {
     width: 95%;
-    padding: 15px;
-  }
-  
-  mat-card-title {
-    font-size: 20px;
-    margin-bottom: 20px;
+    padding: 20px;
   }
 
-  button {
+  mat-card-title {
+    font-size: 20px;
+  }
+
+  button[mat-raised-button] {
     padding: 10px;
     font-size: 15px;
   }
 }
-/* Signup component SCSS file */
 
+/* Additional Icon Button Styling */
 mat-form-field {
   position: relative;
 
   mat-icon {
-    font-size: 20px; /* Adjust the size of the icon */
+    font-size: 20px;
+    color: #757575;
   }
 
   button[mat-icon-button] {
-    padding: 0; /* Remove padding around the button */
-    width: 30x; /* Adjust the button width */
-    height: 50px; /* Adjust the button height */
-    line-height: 1; 
+    padding: 0;
+    width: 30px;
+    height: 50px;
+    line-height: 1;
   }
 }
-

@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { CustomerRoutingModule } from './customer-routing.module';
-import { CustomerComponent } from './customer.component';
 import { DemoAngularMaterailModule } from '../DemoAngularMaterialModule';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CustomerComponent } from './customer.component';
+
 
 
 @NgModule({
   declarations: [
-    CustomerComponent
+   CustomerComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    DemoAngularMaterailModule
+    DemoAngularMaterailModule,
+   
   ]
 })
 export class CustomerModule { }

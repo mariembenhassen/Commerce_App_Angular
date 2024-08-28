@@ -16,11 +16,17 @@ import { DemoAngularMaterailModule } from './DemoAngularMaterialModule';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
+
+    
+
   ],
   imports: [
     BrowserModule,
@@ -29,13 +35,14 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-  
+
     MatCardModule,
     MatSnackBarModule,
     AppRoutingModule,
     DemoAngularMaterailModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    
   ],
   providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent]

@@ -16,7 +16,7 @@ export class AdminService {
     return this.http.post(BASIC_URL + 'api/admin/category', categoryDto,
       { headers: this.createAuthorizationHeader(), })
   }
-  getAllCategory(): Observable<any>{
+  getAllCategories(): Observable<any>{
     return this.http.get(BASIC_URL + 'api/admin',
       { headers: this.createAuthorizationHeader(), })
   }
@@ -24,6 +24,11 @@ export class AdminService {
   addProduct(productDto:any): Observable<any>{
     return this.http.post(BASIC_URL + 'api/admin/product', productDto,
       { headers: this.createAuthorizationHeader(), })
+  }
+
+  getAllProducts(): Observable<any>{
+    return this.http.get(BASIC_URL + 'api/admin/products',
+      { headers: this.createAuthorizationHeader()})
   }
 
   private createAuthorizationHeader(): HttpHeaders{

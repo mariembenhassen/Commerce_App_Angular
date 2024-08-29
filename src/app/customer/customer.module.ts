@@ -4,6 +4,7 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { DemoAngularMaterailModule } from '../DemoAngularMaterialModule';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CustomerComponent } from './customer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -16,6 +17,9 @@ import { CustomerComponent } from './customer.component';
     CommonModule,
     CustomerRoutingModule,
     DemoAngularMaterailModule,
+    FormsModule,
+    ReactiveFormsModule,
+    
    
   ]
 })
